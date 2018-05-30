@@ -65,6 +65,14 @@ This will take a few minutes, depending on the size of the image file. To check 
        sudo dd bs=1M if=2018-04-18-raspbian-stretch.img of=/dev/disk4 conv=sync
        ```
 
+- After the `dd` command finishes, eject the card:
+
+    ```
+    sudo diskutil eject /dev/rdisk<disk# from diskutil>
+    ```
+
+    Alternatively, open Disk Utility and use this to eject the SD card.
+
 ## Alternative method
 
 **Note**: Some users have reported issues with using this method to create SD cards, possibly because earlier versions of these instructions didn't note that it may be necessary to unmount multiple partitions on the SD card.
